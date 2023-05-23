@@ -13,7 +13,7 @@ embedding_model_dict = {
     "ernie-tiny": "nghuyong/ernie-3.0-nano-zh",
     "ernie-base": "nghuyong/ernie-3.0-base-zh",
     "text2vec-base": "shibing624/text2vec-base-chinese",
-    "text2vec": "GanymedeNil/text2vec-large-chinese",
+    "text2vec": "/hy-tmp/models/text2vec-large-chinese"    #本地路径
 }
 
 # Embedding model name
@@ -28,13 +28,13 @@ EMBEDDING_DEVICE = "cuda" if torch.cuda.is_available() else "mps" if torch.backe
 llm_model_dict = {
     "chatglm-6b-int4-qe": {
         "name": "chatglm-6b-int4-qe",
-        "pretrained_model_name": "THUDM/chatglm-6b-int4-qe",
+        "pretrained_model_name": "THUDM/chatglm-6b-int4-qe",  
         "local_model_path": None,
         "provides": "ChatGLM"
     },
     "chatglm-6b-int4": {
         "name": "chatglm-6b-int4",
-        "pretrained_model_name": "THUDM/chatglm-6b-int4",
+        "pretrained_model_name": "THUDM/chatglm-6b-int4",    
         "local_model_path": None,
         "provides": "ChatGLM"
     },
@@ -45,8 +45,13 @@ llm_model_dict = {
         "provides": "ChatGLM"
     },
     "chatglm-6b": {
+        # "name": "chatglm-6b",
+        # "pretrained_model_name": "THUDM/chatglm-6b",   #本地路径
+        # "local_model_path": "/hy-tmp/models/chatglm-6b-int4",
+        # "provides": "ChatGLM"
+
         "name": "chatglm-6b",
-        "pretrained_model_name": "THUDM/chatglm-6b",
+        "pretrained_model_name": "/hy-tmp/models/chatglm-6b-int4",   #本地路径
         "local_model_path": None,
         "provides": "ChatGLM"
     },

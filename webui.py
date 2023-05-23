@@ -101,6 +101,8 @@ def get_answer(query, vs_path, history, mode, score_threshold=VECTOR_SEARCH_SCOR
     flag_csv_logger.flag([query, vs_path, history, mode], username=FLAG_USER_NAME)
 
 
+print ('init_mode----------')
+
 def init_model(llm_model: BaseAnswer = None):
     try:
         local_doc_qa.init_cfg(llm_model=llm_model)

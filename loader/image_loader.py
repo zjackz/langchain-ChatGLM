@@ -7,7 +7,11 @@ import os
 import nltk
 from configs.model_config import NLTK_DATA_PATH
 
+
+
 nltk.data.path = [NLTK_DATA_PATH] + nltk.data.path
+
+
 
 class UnstructuredPaddleImageLoader(UnstructuredFileLoader):
     """Loader that uses unstructured to load image files, such as PNGs and JPGs."""
@@ -34,7 +38,14 @@ class UnstructuredPaddleImageLoader(UnstructuredFileLoader):
       
 if __name__ == "__main__":
     filepath = os.path.join(os.path.dirname(os.path.dirname(__file__)), "content", "samples", "test.jpg")
+
+    print (filepath)
+
+
     loader = UnstructuredPaddleImageLoader(filepath, mode="elements")
     docs = loader.load()
+
+
+
     for doc in docs:
         print(doc)

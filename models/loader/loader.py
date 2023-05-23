@@ -86,9 +86,16 @@ class LoaderCheckPoint:
         :return:
         """
         print(f"Loading {model_name}...")
+
+        print(1111)
+
+        
         t0 = time.time()
 
         checkpoint = Path(f'{self.model_dir}/{model_name}')
+
+
+        # checkpoint = Path(f'{model_name}')
 
         self.is_llamacpp = len(list(checkpoint.glob('ggml*.bin'))) > 0
 
